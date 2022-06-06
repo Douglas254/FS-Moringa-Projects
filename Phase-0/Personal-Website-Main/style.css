@@ -3,6 +3,7 @@
   margin: 0;
 }
 body {
+  height: 400vh;
   margin: 0 4%;
 }
 
@@ -74,4 +75,59 @@ nav {
   border: 1px solid yellow;
   background: linear-gradient(45deg, yellow, blue, green);
   color: white;
+}
+
+/* Home Section */
+.home {
+  display: flex;
+  margin: 20px auto;
+  padding: 40px;
+  background-color: #0bceae60;
+}
+
+.profile img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.profile img:hover {
+  transform: scale(1.01);
+}
+
+.home__desc {
+  width: 100%;
+  padding: 40px 0 0 30px;
+}
+
+.home__desc p {
+  padding: 20px 0px;
+  font-size: 35px;
+}
+
+.home__desc h1 {
+  font-size: 38px;
+  margin-bottom: 30px;
+}
+
+.home__desc h2 {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+.cv {
+  margin: 80px;
+}
+
+.cv a {
+  border: 2px solid yellow;
+  background: linear-gradient(45deg, yellow, blue, green);
+  color: white;
+  padding: 20px;
+  border-radius: 40px 1px 40px 1px;
+  font-size: 25px;
+}
+
+.cv a:hover {
+  font-size: 24px;
 }
