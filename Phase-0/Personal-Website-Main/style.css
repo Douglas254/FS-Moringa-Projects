@@ -3,7 +3,6 @@
   margin: 0;
 }
 body {
-  height: 400vh;
   margin: 0 4%;
 }
 
@@ -189,4 +188,93 @@ nav {
 .about__span {
   color: rgb(124, 124, 124);
   margin-left: 20px;
+}
+
+/* contact section */
+
+.contact__section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 80px 0;
+}
+
+.intouch {
+  padding: 30px;
+  height: 50vh;
+  background-color: rgba(128, 128, 128, 0.1);
+  border-radius: 20px 0 0 50px;
+}
+
+.intouch span {
+  margin-right: 10px;
+}
+
+.intouch img {
+  width: 4%;
+  height: 8%;
+}
+
+.contact__par {
+  width: 50%;
+  margin-bottom: 40px;
+}
+
+.form {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+    rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+    rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+  border-radius: 9px;
+  width: 50%;
+}
+
+.form h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 22px;
+}
+
+.form form {
+  display: inline-flex;
+  flex-direction: column;
+  width: 90%;
+}
+
+.form input {
+  margin-bottom: 20px;
+  border: 1px solid #a3ede1;
+  border-radius: 3px;
+  padding: 10px 2px;
+}
+
+.form textarea {
+  border: 1px solid #a3ede1;
+  border-radius: 4px;
+  padding: 10px 2px;
+}
+
+.form button {
+  margin-top: 10px;
+  background-color: #aaff004e;
+  color: #000000;
+  text-transform: uppercase;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.form button:hover {
+  margin-top: 10px;
+  background-color: #000000;
+  color: #ffffff;
+  text-transform: uppercase;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
 }
