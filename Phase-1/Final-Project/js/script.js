@@ -17,6 +17,13 @@ generateMealBtn.addEventListener("click", () => {
   getMeal();
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  getComments();
+  document
+    .getElementById("commentForm")
+    .addEventListener("submit", handleSubmit);
+});
+
 like.addEventListener("click", () => {
   const counArea = document.getElementById("count");
   const count = parseInt(countLike++, 10);
@@ -61,4 +68,45 @@ const displayMeal = (mealObj) => {
   list.innerHTML = `${ingredients
     .map((ingredient) => `<li>${ingredient}</li>`)
     .join("")}`;
+};
+
+// function for getting user input and validation when user submit a blank comment
+const handleSubmit = (e) => {
+  e.preventDefault();
+  let commentObj = {
+    comment: e.target.input.value,
+  };
+  console.log(commentObj);
+  if (commentObj.comment === "") {
+    alert("You can not submit a blank comment");
+  } else {
+    submitForm(commentObj);
+  }
+};
+
+// function to submit the form input
+const submitForm = (commentObj) => {
+  fetch("http://localhost:3000/comments", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(commentObj),
+  })
+    .then((res) => res.json())
+    .then((comments) => console.log(comments));
+};
+
+// function to fetch the comments from local db and display on the browser
+const getComments = () => {
+  fetch("http://localhost:3000/comments")
+    .then((res) => res.json())
+    .then((resData) => {
+      resData.forEach((comment) => {
+        console.log(comment);
+        const p = document.createElement("p");
+        document.querySelector(".comments").append(p);
+        p.innerText = comment["comment"];
+      });
+    });
 };
