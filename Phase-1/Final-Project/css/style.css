@@ -1,4 +1,10 @@
 /* All the custom css here */
+h1,
+h2,
+h3 {
+  text-transform: uppercase;
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -67,6 +73,21 @@ header {
   background: linear-gradient(15deg, red, blue, yellow);
 }
 
+.mealSpan {
+  font-size: 19px !important;
+}
+
+.img-fluid {
+  border: 2px dashed purple !important;
+}
+
+#title {
+  text-transform: capitalize;
+}
+
+#ingredientsTitle {
+  text-transform: uppercase;
+}
 .underline {
   position: absolute;
   background: #800064;
@@ -77,6 +98,14 @@ header {
 
 #iframe {
   position: relative;
+}
+
+#iframe iframe {
+  position: relative;
+  /* box-shadow: rgba(0, 0, 0, 0.16) 2px 3px 6px, rgb(51, 51, 51) 0px 0px 0px 3px; */
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px,
+    rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+  border: 3px solid black;
 }
 
 .like {
