@@ -75,11 +75,20 @@ header {
   left: 49%;
 }
 
+#iframe {
+  position: relative;
+}
+
 .like {
   position: absolute;
-  left: 17%;
+  left: 80%;
   font-size: 30px;
   cursor: pointer;
+  border: 1px solid purple;
+  border-radius: 50px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
 }
 
 .countLike {
@@ -123,8 +132,12 @@ form {
   }
   .like {
     position: absolute;
-    left: 20%;
+    left: 73%;
     font-size: 20px;
     cursor: pointer;
+  }
+  #iframe iframe {
+    width: 100%;
+    height: 250px;
   }
 }

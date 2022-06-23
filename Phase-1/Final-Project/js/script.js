@@ -10,9 +10,17 @@ const tags = document.getElementById("tags");
 const image = document.querySelector(".img-fluid");
 const embedVideo = document.getElementById("recipeVideo");
 const list = document.getElementById("list");
+const like = document.querySelector(".like");
+let countLike = document.querySelector(".countLike").innerText;
 
 generateMealBtn.addEventListener("click", () => {
   getMeal();
+});
+
+like.addEventListener("click", () => {
+  const counArea = document.getElementById("count");
+  const count = parseInt(countLike++, 10);
+  counArea.innerText = count;
 });
 
 // function get the random meal
